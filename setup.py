@@ -23,7 +23,7 @@ extensions = [
 
 setuptools.setup(
     name='rackspace-neutronclient',
-    version='1.0',
+    version='1.1',
     author='Rackspace',
     author_email='neutron-requests@lists.rackspace.com',
     description='Metapackage to install rackspace-python-neutronclient and '
