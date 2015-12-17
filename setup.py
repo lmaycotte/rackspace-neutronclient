@@ -1,4 +1,4 @@
-#   Copyright 2012-2013 Rackspace
+#   Copyright 2012-2015 Rackspace
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -15,27 +15,22 @@
 import setuptools
 
 
-novaclient_extensions = [
-    'rackspace-auth-openstack',                         # RAX-KSKEY
-    'os_diskconfig_python_novaclient_ext',              # Disk_config
-    'rax_scheduled_images_python_novaclient_ext',       # RAX-SI (replaces
-                                                        #   backup_schedule)
-    'os_networksv2_python_novaclient_ext',              # Rax_Networks
-    'os_virtual_interfacesv2_python_novaclient_ext',    # Virtual interfaces
-    'rax_default_network_flags_python_novaclient_ext'   # default network flags
+extensions = [
+    'rackspace-auth-neutronclientext',                  # RAX-KSKEY
+    'python_neutronclient_ip_address_extension',        # ip-address-*
 ]
 
 
 setuptools.setup(
-    name='rackspace-novaclient',
-    version='1.4',
+    name='rackspace-neutronclient',
+    version='1.1',
     author='Rackspace',
-    author_email='johannes.erdfelt@rackspace.com',
-    description='Metapackage to install python-novaclient and Rackspace '
-                'extensions',
+    author_email='neutron-requests@lists.rackspace.com',
+    description='Metapackage to install rackspace-python-neutronclient and '
+                'Rackspace extensions',
     license='Apache License, Version 2.0',
-    url='https://github.com/rackerlabs/rackspace-novaclient',
-    install_requires=['python-novaclient'] + novaclient_extensions,
+    url='https://github.com/rackerlabs/rackspace-neutronclient',
+    install_requires=['rackspace-python-neutronclient'] + extensions,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
